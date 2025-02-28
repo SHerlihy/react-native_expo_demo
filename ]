@@ -9,23 +9,15 @@ export default function Header({ navigation }) {
         <View style={styles.container}>
             <Pressable
                 onPress={() => setIsOpen(!isOpen)}
-            >
-                <div
-                    style={styles.content}
-                >
-                    <Logo length={50} />
-                    <Text style={styles.text}>
-                        Little Lemon
-                    </Text>
-                </div>
-                <div
-                    style={styles.content}
-                >
-                    <Text>
-                        {!isOpen && <>&#9660;</>}
-                        {isOpen && <>&#9650;</>}
-                    </Text>
-                </div>
+                style={styles.content}>
+                <Logo length={50} />
+                <Text style={styles.text}>
+                    Little Lemon
+                </Text>
+<Text>
+{!isOpen && <>&#9660;</>}
+{isOpen && <>&#9650;</>}
+</Text>
             </Pressable>
             {isOpen && <RoutesMenu navigation={navigation} />}
         </View>

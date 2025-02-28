@@ -7,7 +7,7 @@ export default function Footer(){
                 All rights reserved by Little Lemon, 2022
             </Text>
         </View>
-    )
+    );
 }
 
 const styles = StyleSheet.create({

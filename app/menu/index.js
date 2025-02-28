@@ -1,4 +1,4 @@
-import { View, StyleSheet, FlatList } from "react-native-web";
+import { View, StyleSheet } from "react-native-web";
 import MenuItem from "./components/MenuItem";
 import SectionHeader from "./components/SectionHeader";
 import { SectionList } from "react-native";
