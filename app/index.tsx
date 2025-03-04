@@ -34,14 +34,17 @@ export default function Index() {
                     headerLeftContainerStyle: {
                         display: "none",
                     },
+
                     headerTitle: () => <Header navigation={props.navigation} />,
                     headerTitleContainerStyle: {
                         marginLeft: 0,
                         marginRight: 0,
                         left: 0,
                         flex: 1,
+                        maxWidth: null,
                     },
                     headerTitleAlign: "center",
+
                     headerRight: () => null,
                     headerRightContainerStyle: {
                         display: "none",
