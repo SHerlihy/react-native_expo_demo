@@ -40,6 +40,7 @@ export default function Index() {
                         marginRight: 0,
                         left: 0,
                         flex: 1,
+                        maxWidth: null,
                     },
                     headerTitleAlign: "center",
                     headerRight: () => null,
