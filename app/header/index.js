@@ -4,11 +4,13 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import RoutesMenu from "./components/RoutesMenu.js"
 
 export default function Header({ navigation }) {
-    const [isOpen, setIsOpen] = useState(false)
     return (
         <View style={styles.container}>
             <Pressable
-                onPress={() => setIsOpen(!isOpen)}
+                onPress={() => {
+                    navigation.toggleDrawer()
+                }
+                }
             >
                 <div
                     style={styles.content}
@@ -22,13 +24,11 @@ export default function Header({ navigation }) {
                     style={styles.content}
                 >
                     <Text>
-                        {!isOpen && <>&#9660;</>}
-                        {isOpen && <>&#9650;</>}
+                        <>&#9660;</>
                     </Text>
                 </div>
             </Pressable>
-            {isOpen && <RoutesMenu navigation={navigation} />}
-        </View>
+        </View >
     )
 }
 
@@ -36,7 +36,6 @@ const styles = StyleSheet.create({
     //prefer grid as content will be subject to little change
     ////grid not allowed in native could use FlatList
     container: {
-        padding: 5,
         backgroundColor: '#EE9972',
     },
     content: {

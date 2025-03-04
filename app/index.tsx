@@ -3,7 +3,7 @@ import { Text, View, useColorScheme } from "react-native";
 import Header from "./header/index"
 import Footer from "./footer/index"
 
-import { createNativeStackNavigator } from "@react-navigation/native-stack"
+import { createDrawerNavigator } from "@react-navigation/drawer"
 
 import Welcome from "./welcome/index.js"
 import Login from "./login/index.js"
@@ -12,7 +12,7 @@ import Logo from "./shared/logo";
 
 export default function Index() {
     const colorScheme = useColorScheme()
-    const Stack = createNativeStackNavigator()
+    const Stack = createDrawerNavigator()
 
     return (
         <View
@@ -28,9 +28,26 @@ export default function Index() {
             ]}
         >
             <Stack.Navigator
-                screenOptions={{
-                    header: (props) => <Header navigation={props.navigation}/>
-                }}
+                initialRouteName="welcome"
+                screenOptions={(props) => ({
+                    headerLeft: () => null,
+                    headerLeftContainerStyle: {
+                        display: "none",
+                    },
+                    headerTitle: () => <Header navigation={props.navigation} />,
+                    headerTitleContainerStyle: {
+                        marginLeft: 0,
+                        marginRight: 0,
+                        left: 0,
+                        flex: 1,
+                    },
+                    headerTitleAlign: "center",
+                    headerRight: () => null,
+                    headerRightContainerStyle: {
+                        display: "none",
+                    },
+                })
+                }
             >
                 <Stack.Screen name="welcome" component={Welcome} />
                 <Stack.Screen name="login" component={Login} />
