@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView, StyleSheet, TextInput } from 'react-native';
+import { StyleSheet, TextInput, View } from 'react-native';
 
 import TextThemed from "../../shared/text/index.js"
 
@@ -8,7 +8,7 @@ export default function LoginInput() {
     const [password, onChangePassword] = useState('');
 
     return (
-        <ScrollView style={styles.container}>
+        <View style={styles.container}>
             <TextThemed style={styles.headerText}>
                 Welcome to Little Lemon
             </TextThemed>
@@ -30,7 +30,7 @@ export default function LoginInput() {
                 keyboardType={'default'}
                 secureTextEntry={true}
             />
-        </ScrollView>
+        </View>
     );
 }
 

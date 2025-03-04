@@ -7,8 +7,26 @@ import { createDrawerNavigator } from "@react-navigation/drawer"
 
 import Welcome from "./welcome/index.js"
 import Login from "./login/index.js"
-import Menu from "./menu/index.js"
-import Logo from "./shared/logo";
+
+export default function BackgroundThemed({children}){
+    const colorScheme = useColorScheme()
+return(
+        <View
+            style={[
+                {
+                    backgroundColor: colorScheme === 'light' ? '#bbb' : '#222',
+                },
+                {
+                    flex: 1,
+                    flexDirection: "column",
+                    justifyContent: 'space-between',
+                },
+            ]}
+        >
+{children}
+</View>
+)
+}
 
 export default function Index() {
     const colorScheme = useColorScheme()
