@@ -1,7 +1,5 @@
-import { useState } from "react";
 import Logo from "../shared/logo/index.js"
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import RoutesMenu from "./components/RoutesMenu.js"
 
 export default function Header({ navigation }) {
     return (
@@ -12,21 +10,21 @@ export default function Header({ navigation }) {
                 }
                 }
             >
-                <div
+                <View
                     style={styles.content}
                 >
                     <Logo length={50} />
                     <Text style={styles.text}>
                         Little Lemon
                     </Text>
-                </div>
-                <div
+                </View>
+                <View
                     style={styles.content}
                 >
                     <Text>
-                        <>&#9660;</>
+                        &#9660;
                     </Text>
-                </div>
+                </View>
             </Pressable>
         </View >
     )

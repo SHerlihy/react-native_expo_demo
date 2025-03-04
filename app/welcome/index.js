@@ -1,9 +1,9 @@
-import { ScrollView, Text, StyleSheet } from "react-native-web";
+import { ScrollView, StyleSheet, Text } from "react-native";
 
 export default function Welcome() {
     return (
         <ScrollView>
-            <Text >
+            <Text>
                 <Text>
                     Welcome to Little Lemon
                 </Text>
