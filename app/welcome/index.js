@@ -1,34 +1,45 @@
-import { ScrollView, StyleSheet, Text } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import BackgroundThemed from "../shared/BackgroundThemed";
+import TextThemed from "../shared/text";
 
 export default function Welcome() {
     return (
-        <ScrollView>
-            <Text>
-                <Text>
-                    Welcome to Little Lemon
+        <BackgroundThemed>
+            <View
+                style={
+                    styles.container
+                }
+            >
+                <Text
+                    style={
+                        styles.chapter
+                    }
+                >
+                    <TextThemed>
+                        Welcome to Little Lemon
+                    </TextThemed>
+                    <Text>&nbsp;</Text>
+                    <TextThemed>
+                        Little Lemon is a charming neighborhood bistro that serves simple food and classic cocktails in a lively but casual environment. We would love to hear more about your experience with us!
+                    </TextThemed>
                 </Text>
-                <Text>
-                    Little Lemon is a charming neighborhood bistro that serves simple food and classic cocktails in a lively but casual environment. We would love to hear more about your experience with us!
-                </Text>
-            </Text>
-        </ScrollView>
+            </View>
+        </BackgroundThemed>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
+        display: "flex",
         flex: 1,
-        backgroundColor: '#333333',
+        flexDirection: "column",
     },
 
-    text: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        color: 'white',
-    },
-
-    text_highlight: {
-        padding: '1rem',
+    chapter: {
+        display: "flex",
+        flex: 1,
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
     },
 })
