@@ -34,6 +34,7 @@ export default function Index() {
                     headerLeftContainerStyle: {
                         display: "none",
                     },
+
                     headerTitle: () => <Header navigation={props.navigation} />,
                     headerTitleContainerStyle: {
                         marginLeft: 0,
@@ -43,6 +44,7 @@ export default function Index() {
                         maxWidth: null,
                     },
                     headerTitleAlign: "center",
+
                     headerRight: () => null,
                     headerRightContainerStyle: {
                         display: "none",
